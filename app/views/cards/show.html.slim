@@ -1,0 +1,14 @@
+h4 Title
+= @card.title
+h4 Content
+p = simple_format(@card.content)
+h4 Hours
+p = @card.hours
+h4 Location
+p = @card.location
+h4 Pay
+p = @card.pay
+
+= link_to "All Cards", cards_path
+= link_to "Edit", edit_card_path(@card)
+= link_to "Delete", card_path(@card), method: :delete, data: {confirm: "Are you sure you want to delete this?"}
