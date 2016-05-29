@@ -11,4 +11,4 @@ Devise gem is being used for auth
 Still to add Pagination
 Style forms
 Style pages
-Write tests 
+Write tests
