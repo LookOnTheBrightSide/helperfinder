@@ -7,6 +7,9 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
+  namespace :api do
+    resources :cards
+  end
 
   authenticated :user do
     root "cards#index", as: "authenticated_root"
