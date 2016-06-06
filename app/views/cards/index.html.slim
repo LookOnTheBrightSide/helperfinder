@@ -1,18 +1,1 @@
-h1 All Cards
-- @cards.each do |card|
-  a href=url_for(card)
-    h2 = card.title
-    h4 = card.location
-    h5 = time_ago_in_words(card.created_at) +  " ago"
-
-= link_to "Create Card", new_card_path
-hr
-h3 My cards
-- unless current_user && @cards.blank?
-  - @card_current_user.each do |card|
-    h2 =  link_to card.title, card
-- else
-
-  h2 Create some cards
-  p Start making some extra cash now!
-  button = link_to "Create Card", new_card_path
+  = react_component 'Cards', {cards: @cards}

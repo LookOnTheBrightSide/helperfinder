@@ -10,3 +10,52 @@
   = f.label :pay
   = f.text_field :pay
   = f.button :submit
+
+  .row
+    div.col-md-6.col-md-offset-3
+      form.form-horizontal
+        fieldset
+          /! Form Name
+          legend Create Card
+          /! Text input
+          .row.gap
+            .form-group
+              label.col-md-4.control-label for="title"  = f.label :title
+
+              .col-md-8
+                input#title.form-control.input-md name="title" placeholder=("Lawn mowing") required="" type="text" /
+            /! Select Basic
+          .row.gap
+            .form-group
+              label.col-md-4.control-label for="hours"  Hours
+              .col-md-8
+                select#hours.form-control name="hours"
+                  option value="1"  1
+                  option value="2"  2
+                  option value="3"  3
+                  option value="4"  4
+                  option value="5"  5
+                  option value="6"  6
+                  option value="7"  7
+                  option value="8"  8
+            /! Textarea
+          .row.gap
+            .form-group
+              label.col-md-4.control-label for="description"  Description
+              .col-md-8
+                textarea#description.form-control name="description"  I want someone to ...
+          .row.gap
+            .form-group
+              label.col-md-4.control-label for="location"  Location
+              .col-md-8
+                textarea#location.form-control name="location"  Donnybrook
+          .row.gap
+            .form-group
+              label.col-md-4.control-label for="pay"  Pay
+              .col-md-8
+                textarea#pay.form-control name="pay" 10
+          .row.gap
+            .form-group
+              label.col-md-4.control-label for="Submit" Okay!
+              .col-md-8
+                button#submit.btn.btn-success Submit
